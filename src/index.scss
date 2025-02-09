@@ -2,7 +2,11 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-weight: 400;
 }
-
+*{
+  text-decoration: none;
+  list-style: none;
+  color: inherit;
+}
 a {
   text-decoration: inherit;
 }
@@ -11,6 +15,7 @@ html,
 body {
   margin: 0;
   padding: 0;
+  width: 100%;
   min-height: 100vh;
   box-sizing: border-box;
 }
