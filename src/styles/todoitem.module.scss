@@ -1,65 +1,65 @@
-// @import "./variables";
-// @import "./placeholders";
+@import "./variables";
+@import "./placeholders";
 
-// .list__item {
-//     @extend %flex-sb;
-//     text-align: start;
-//     width: 1000px;
-//     height: 40px;
-//     font-size: 19px;
-//     padding-left: 15px;
-//     padding-right: 5px;
-//     border: 3px solid $color-lightgrey;
-//     margin-top: 10px;
-//     cursor: pointer;
+.list__item {
+    @extend %flex-sb;
+    text-align: start;
+    width: 1000px;
+    height: 40px;
+    font-size: 19px;
+    padding-left: 15px;
+    padding-right: 5px;
+    border: 3px solid $color-lightgrey;
+    margin-top: 10px;
+    cursor: pointer;
   
-//     @media (max-width: 1040px) {
-//       width: 100%;
-//     }
-//     @media (max-width: 650px) {
-//       font-size: 18px;
-//     }
-//     @media (max-width: 375px) {
-//       font-size: 17px;
-//     }
-//     @media (max-width: 559px) {
-//       font-size: 16px;
-//     }
+    @media (max-width: 1040px) {
+      width: 100%;
+    }
+    @media (max-width: 650px) {
+      font-size: 18px;
+    }
+    @media (max-width: 375px) {
+      font-size: 17px;
+    }
+    @media (max-width: 559px) {
+      font-size: 16px;
+    }
   
-//     .list__item_tasks {
-//       @extend %flex-sb;
-//       height: 40px;
-//     }
-//     .list__item_input {
-//       margin-right: 10px;
-//     }
+    .list__item_tasks {
+      @extend %flex-sb;
+      height: 40px;
+    }
+    .list__item_input {
+      margin-right: 10px;
+    }
   
-//     .list__item_title {
-//       font-size: 19px;
-//       font-weight: 500;
-//       font-family: "Montserrat", sans-serif;
+    .list__item_title {
+      font-size: 19px;
+      font-weight: 500;
+      font-family: "Montserrat", sans-serif;
   
-//       @media (max-width: 550px) {
-//         font-size: 17px;
-//       }
-//       @media (max-width: 450px) {
-//         font-size: 14px;
-//         text-align: justify;
-//       }
-//     }
-//     .list__item_croos {
-//       display: flex;
-//       justify-content: center;
-//       align-items: center;
-//       height: 40px;
-//       width: 40px;
-//       font-size: 34px;
-//       font-weight: 600;
-//       color: #e70000;
-//       cursor: pointer;
+      @media (max-width: 550px) {
+        font-size: 17px;
+      }
+      @media (max-width: 450px) {
+        font-size: 14px;
+        text-align: justify;
+      }
+    }
+    .list__item_croos {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 40px;
+      width: 40px;
+      font-size: 34px;
+      font-weight: 600;
+      color: #e70000;
+      cursor: pointer;
   
-//       @media (max-width: 450px) {
-//         font-size: 32px;
-//       }
-//     }
-//   }
+      @media (max-width: 450px) {
+        font-size: 32px;
+      }
+    }
+  }
