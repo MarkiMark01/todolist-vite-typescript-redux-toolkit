@@ -1,3 +1,4 @@
+import Footer from "./components/Footer";
 import Header from "./components/Header";
 import RoutesPage from "./components/RoutesPage";
 
@@ -6,6 +7,7 @@ function App() {
     <main >
       <Header/>
       <RoutesPage />
+      <Footer/>
     </main>
   );
 }

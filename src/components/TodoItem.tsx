@@ -1,13 +1,16 @@
+import { FC } from "react";
 import styles from "../styles/todoitem.module.scss";
 
-const TodoItem = ({
-  todo,
-  onToggleComplete,
-  onDeleteTodo,
-}: {
+interface TodoItemProps {
   todo: { id: string; text: string; completed: boolean };
   onToggleComplete: (id: string) => void;
   onDeleteTodo: (id: string) => void;
+}
+
+const TodoItem: FC<TodoItemProps> = ({
+  todo,
+  onToggleComplete,
+  onDeleteTodo,
 }) => {
   return (
     <li className={styles.list__item}>
@@ -36,4 +39,6 @@ const TodoItem = ({
     </li>
   );
 };
+
 export default TodoItem;
+

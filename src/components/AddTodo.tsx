@@ -5,7 +5,7 @@ import { AppDispatch } from "../redux/store";
 import { addTodo } from "../redux/todoOperations";
 import styles from "../styles/addtodo.module.scss";
 
-export default function AddTodo() {
+const AddTodo = () => {
   const [input, setInput] = useState("");
   const dispatch = useDispatch<AppDispatch>();
 
@@ -29,4 +29,6 @@ export default function AddTodo() {
       </button>
     </form>
   );
-}
+};
+
+export default AddTodo;
