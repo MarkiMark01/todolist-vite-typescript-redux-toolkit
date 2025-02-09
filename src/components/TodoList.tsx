@@ -1,4 +1,5 @@
 import TodoItem from "./TodoItem";
+import styles from '../styles/todolist.module.scss';
 
 const TodoList = ({
   filteredTodos,
@@ -9,22 +10,21 @@ const TodoList = ({
   handleToggleComplete: (id: string) => void;
   handleDeleteTodo: (id: string) => void;
 }) => {
+  if (filteredTodos.length === 0) return null;
+
   return (
-    <ul>
-      {filteredTodos.length === 0 ? (
-        <li>No tasks found</li>
-      ) : (
-        filteredTodos.map((todo) => (
-          <TodoItem
-            key={todo.id}
-            todo={todo}
-            onToggleComplete={handleToggleComplete}
-            onDeleteTodo={handleDeleteTodo}
-          />
-        ))
-      )}
+    <ul className={styles.list}>
+      {filteredTodos.map((todo) => (
+        <TodoItem
+          key={todo.id}
+          todo={todo}
+          onToggleComplete={handleToggleComplete}
+          onDeleteTodo={handleDeleteTodo}
+        />
+      ))}
     </ul>
   );
 };
 
 export default TodoList;
+

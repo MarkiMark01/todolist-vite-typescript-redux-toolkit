@@ -15,7 +15,7 @@ import styles from '../styles/todos.module.scss';
 
 const Todos = () => {
   const dispatch = useDispatch<AppDispatch>();
-  const { todos, loading, error } = useSelector(
+  const { todos, error } = useSelector(
     (state: RootState) => state.todos
   );
   const [filter, setFilter] = useState("");
@@ -36,11 +36,11 @@ const Todos = () => {
     todo.text.toLowerCase().includes(filter.toLowerCase())
   );
 
-  if (loading) return <p>Loading...</p>;
   if (error) return <p>Error loading todos</p>;
 
   return (
-    <section className={styles.mainContainer}>
+    <section className={styles.todos}>
+      <section className={styles.todos__container}>
       <AddTodo />
       <FilterTodo filter={filter} setFilter={setFilter} />
       <TodoList
@@ -48,7 +48,9 @@ const Todos = () => {
         handleDeleteTodo={handleDeleteTodo}
         filteredTodos={filteredTodos}
       />
+      </section>
     </section>
   );
 };
+
 export default Todos;

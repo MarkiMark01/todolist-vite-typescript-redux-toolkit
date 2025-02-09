@@ -7,7 +7,7 @@ const NotFoundPage = () => {
     <div className={styles.nopage}>
       <p>Oops, something went wrong... Error 404🕵️</p>
       <section className={styles.nopageLink}>
-        <NavLink to="/todos">Go to Todo list</NavLink>
+        <NavLink to="/">Go to Todo list</NavLink>
       </section>
     </div>
   );

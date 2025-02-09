@@ -1,3 +1,5 @@
+import styles from "../styles/todoitem.module.scss";
+
 const TodoItem = ({
   todo,
   onToggleComplete,
@@ -8,21 +10,29 @@ const TodoItem = ({
   onDeleteTodo: (id: string) => void;
 }) => {
   return (
-    <li>
-      <input
-        type="checkbox"
-        checked={todo.completed}
-        onChange={() => onToggleComplete(todo.id)}
-      />
+    <li className={styles.list__item}>
+      <section className={styles.list__item_tasks}>
+        <input
+          type="checkbox"
+          checked={todo.completed}
+          onChange={() => onToggleComplete(todo.id)}
+          className={styles.list__item_input}
+        />
+        <span
+          style={{
+            textDecoration: todo.completed ? "line-through" : "none",
+            color: todo.completed ? "lightgreen" : "black",
+          }}
+        >
+          {todo.text}
+        </span>
+      </section>
       <span
-        style={{
-          textDecoration: todo.completed ? "line-through" : "none",
-          color: todo.completed ? "lightgreen" : "black",
-        }}
+        onClick={() => onDeleteTodo(todo.id)}
+        className={styles.list__item_croos}
       >
-        {todo.text}
+        &times;
       </span>
-      <button onClick={() => onDeleteTodo(todo.id)}>❌</button>
     </li>
   );
 };

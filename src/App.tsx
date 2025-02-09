@@ -1,9 +1,9 @@
-import Routes from "./components/Routes";
+import RoutesPage from "./components/RoutesPage";
 
 function App() {
   return (
     <main >
-      <Routes />
+      <RoutesPage />
     </main>
   );
 }

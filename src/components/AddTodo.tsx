@@ -1,8 +1,9 @@
-"use client";
 import { FormEvent, useState } from "react";
 import { useDispatch } from "react-redux";
+
 import { AppDispatch } from "../redux/store";
 import { addTodo } from "../redux/todoOperations";
+import styles from "../styles/addtodo.module.scss";
 
 export default function AddTodo() {
   const [input, setInput] = useState("");
@@ -16,9 +17,16 @@ export default function AddTodo() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input type="text" value={input} onChange={(e) => setInput(e.target.value)} />
-      <button type="submit">Add Todo</button>
+    <form onSubmit={handleSubmit} className={styles.todoForm}>
+      <input
+        type="text"
+        value={input}
+        onChange={(e) => setInput(e.target.value)}
+        className={styles.todoForm__input}
+      />
+      <button type="submit" className={styles.todoForm__btn}>
+        Add Todo
+      </button>
     </form>
   );
 }

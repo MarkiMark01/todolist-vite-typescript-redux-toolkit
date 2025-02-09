@@ -1,5 +1,20 @@
-.mainContainer{
-display: flex;
-flex-direction: column;
-align-items: center;
-}
+// @import "./variables";
+// @import "./placeholders";
+
+// .todos {
+//     @extend %flex-center3;
+//     flex-direction: column;
+//     width: 100%;
+//     min-height: 100vh;
+//     background-color: #f8f8f8;
+  
+//     .todos__container {
+//       width: 1000px;
+//       min-height: 100vh;
+//       background-color: $color-white;
+  
+//       @media (max-width: 1040px) {
+//         width: 100%;
+//       }
+//     }
+//   }
