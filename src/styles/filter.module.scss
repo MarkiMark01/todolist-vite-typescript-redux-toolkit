@@ -1,50 +1,50 @@
-// @import "./variables";
-// @import "./placeholders";
+@import "./variables";
+@import "./placeholders";
 
-// .filterBox {
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     width: 1000px;
-//     height: 50px;
-//     margin-bottom: 10px;
-//     background-color: $color-black;
+.filterBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1000px;
+    height: 50px;
+    margin-bottom: 10px;
+    background-color: $color-black;
   
-//     @media (max-width: 1040px) {
-//       width: 100%;
-//     }
+    @media (max-width: 1040px) {
+      width: 100%;
+    }
   
-//     .filterBox__filter {
-//       display: flex;
-//       width: 500px;
-//       height: 30px;
-//       border-radius: 20px;
-//       border: 1px solid $color-black;
-//       font-size: 16px;
-//       font-weight: 600;
-//       color: $color-black;
-//       margin-right: 10px;
-//       margin-left: 5px;
-//       text-align: center;
-//       outline: none;
+    .filterBox__filter {
+      display: flex;
+      width: 500px;
+      height: 30px;
+      border-radius: 20px;
+      border: 1px solid $color-black;
+      font-size: 16px;
+      font-weight: 600;
+      color: $color-black;
+      margin-right: 10px;
+      margin-left: 5px;
+      text-align: center;
+      outline: none;
   
-//       @media (max-width: 550px) {
-//         font-size: 14px;
-//       }
+      @media (max-width: 550px) {
+        font-size: 14px;
+      }
   
-//       &::placeholder {
-//         font-size: 16px;
-//         font-weight: 600;
-//         color: rgb(207, 198, 198);
-//         font-weight: 400;
+      &::placeholder {
+        font-size: 16px;
+        font-weight: 600;
+        color: rgb(207, 198, 198);
+        font-weight: 400;
   
-//         @media (max-width: 550px) {
-//           font-size: 14px;
-//         }
-//       }
-//       &:focus {
-//         border: 2px solid $color-red;
-//       }
-//     }
-//   }
+        @media (max-width: 550px) {
+          font-size: 14px;
+        }
+      }
+      &:focus {
+        border: 2px solid $color-red;
+      }
+    }
+  }
   
