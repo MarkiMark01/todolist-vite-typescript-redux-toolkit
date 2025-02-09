@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch, RootState } from "../redux/store";
 import { fetchTodos, toggleComplete, deleteTodo } from "../redux/todoOperations";
+import AddTodo from "./AddTodo";
 
 export default function TodoList() {
   const dispatch = useDispatch<AppDispatch>();
@@ -30,7 +31,9 @@ export default function TodoList() {
   if (error) return <p>Error loading todos</p>;
 
   return (
+  
     <div>
+      <AddTodo/>
       <input
         type="text"
         placeholder="Filter tasks"
