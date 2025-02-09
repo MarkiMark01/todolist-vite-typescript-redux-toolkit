@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch, RootState } from "../redux/store";
+
 import {
   fetchTodos,
   toggleComplete,
@@ -10,6 +11,7 @@ import {
 import AddTodo from "./AddTodo";
 import FilterTodo from "./FilterTodo";
 import TodoList from "./TodoList";
+import styles from '../styles/todos.module.scss';
 
 const Todos = () => {
   const dispatch = useDispatch<AppDispatch>();
@@ -38,7 +40,7 @@ const Todos = () => {
   if (error) return <p>Error loading todos</p>;
 
   return (
-    <div>
+    <section className={styles.mainContainer}>
       <AddTodo />
       <FilterTodo filter={filter} setFilter={setFilter} />
       <TodoList
@@ -46,7 +48,7 @@ const Todos = () => {
         handleDeleteTodo={handleDeleteTodo}
         filteredTodos={filteredTodos}
       />
-    </div>
+    </section>
   );
 };
 export default Todos;

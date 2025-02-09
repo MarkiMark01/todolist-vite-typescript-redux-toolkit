@@ -1,12 +1,11 @@
-
-import Todos from './components/Todos'
+import Routes from "./components/Routes";
 
 function App() {
-
-
   return (
-    <Todos/>
-  )
+    <main >
+      <Routes />
+    </main>
+  );
 }
 
-export default App
+export default App;
